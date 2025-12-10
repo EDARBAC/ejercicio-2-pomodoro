@@ -13,8 +13,12 @@ Crear una aplicación web (Single Page Application) que funcione como un tempori
 2.  **Modos de Tiempo:**
     * **Pomodoro:** 25 minutos.
     * **Short Break:** 5 minutos.
-3.  **Controles:** Botón de **Start**, **Pause/Stop** y **Reset**.
-4.  **Feedback Visual:** El diseño debe ser limpio (puedes basarte en la referencia). Opcional: Que el color de fondo cambie según el modo (ej. Rojo suave para trabajo, Azul/Verde para descanso).
+    * **Long Break:** 15 minutos.
+3.  **Controles:** Botón de **Start**, **Pause** y **Skip current timer**.
+4.  **Feedback Visual:** El diseño debe ser limpio (basado en la referencia). El color debe cambiar según el modo 
+- pomodoro (#ba4949)
+- short breack (#38858a)
+- long breack (#397097)
 5.  **Audio (Bonus):** Un sonido al finalizar el tiempo (opcional, si logras que la IA lo implemente).
 
 ---
@@ -22,6 +26,7 @@ Crear una aplicación web (Single Page Application) que funcione como un tempori
 ## 🛠 Instrucciones
 
 ### 1. Preparación
+
 Este repositorio contiene los archivos base ("semillas"):
 * `index.html`: Estructura base vacía.
 * `style.css`: Estilos base vacíos.
