@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    /* Color inicial de Pomodoro. Se actualiza en JS */
+    background-color: #ba4949; 
+    transition: background-color 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: white; /* Texto principal siempre blanco */
+}
+
+#app {
+    padding: 2rem;
+}
+
+.timer-container {
+    /* Similar al diseño: un contenedor que agrupa todo */
+    background-color: rgba(0, 0, 0, 0.1); 
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 380px; 
+}
+
+/* --- Mode Selector Styles --- */
+.mode-selector {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 2rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.mode-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    /* Se asegura que el texto no salte de línea */
+    white-space: nowrap; 
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 700;
+    transition: all 0.2s ease;
+}
+
+.mode-btn:hover {
+    color: white;
+}
+
+.mode-btn.active {
+    background-color: rgba(0, 0, 0, 0.15);
+    color: white;
+}
+
+/* --- Timer Display Styles --- */
+.timer-display {
+    font-size: 7rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    /* Se asegura que el temporizador no salte de línea */
+    white-space: nowrap; 
+}
+
+/* --- Control Buttons Styles --- */
+.controls-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cta-btn {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease;
+}
+
+.start-pause {
+    /* El color de fondo y el color del texto de este botón se controlan en JS */
+    background-color: white;
+    color: #333; 
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    box-shadow: 0 6px 0 var(--shadow-color, rgba(0, 0, 0, 0.1));
+}
+
+.start-pause:hover {
+    filter: brightness(0.95);
+}
+
+.start-pause:active {
+    box-shadow: none !important; /* Desactiva la sombra al hacer click */
+    transform: translateY(2px);
+}
+
+.skip-btn {
+    background-color: transparent;
+    padding: 0;
+    line-height: 0;
+    opacity: 0.7; /* Ligeramente transparente */
+}
+
+.skip-btn:hover {
+    opacity: 1;
+}
+
+.skip-btn.hidden {
+    display: none;
+}
